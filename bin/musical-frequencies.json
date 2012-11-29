@@ -1,0 +1,15 @@
+{ "notes" : [
+{ "frequency" : 65.406, "name" : "C",   "octave" : 2  },
+{ "frequency" : 69.296, "name" : "C#",  "octave" : 2  },
+{ "frequency" : 73.416, "name" : "D",   "octave" : 2  },
+{ "frequency" : 77.782, "name" : "D#",  "octave" : 2  },
+{ "frequency" : 82.407, "name" : "E",   "octave" : 2  },
+{ "frequency" : 87.31,  "name" : "F",   "octave" : 2  },
+{ "frequency" : 92.50,  "name" : "F#",  "octave" : 2  },
+{ "frequency" : 98.00,  "name" : "G",  "octave" : 2  },
+{ "frequency" : 103.83,  "name" : "G#",  "octave" : 2  },
+{ "frequency" : 110.00,  "name" : "A",  "octave" : 2  },
+{ "frequency" : 116.54,  "name" : "A#",  "octave" : 2  },
+{ "frequency" : 123.47,  "name" : "B",  "octave" : 2  },
+{ "frequency" : 130.81,  "name" : "C",  "octave" : 3  },
+]}
