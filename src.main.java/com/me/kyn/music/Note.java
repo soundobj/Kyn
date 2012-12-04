@@ -22,6 +22,8 @@ public class Note {
 		this.octave = octave.intValue();
 	}
 
+	public Note() {}
+
 	public double getFrequency() {
 		return frequency;
 	}
@@ -45,6 +47,13 @@ public class Note {
 	public void setOctave(int octave) {
 		this.octave = octave;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("note:%s octave:%s frequency:%s\n", this.getName(), this.getOctave(), this.getFrequency());
+	}
+	
+	
 	
 
 }

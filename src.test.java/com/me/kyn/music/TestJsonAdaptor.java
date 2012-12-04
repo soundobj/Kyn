@@ -53,6 +53,8 @@ public class TestJsonAdaptor extends TestCase {
 		 * then the list will retain the same order
 		 */
 		assertEquals(65.406, notes.get(0).getFrequency());
+		
+		
            
     }
     
