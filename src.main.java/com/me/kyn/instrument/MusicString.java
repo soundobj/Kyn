@@ -3,6 +3,7 @@ package com.me.kyn.instrument;
 import java.util.List;
 
 import com.me.kyn.music.Note;
+import com.me.kyn.music.NoteGenerator;
 
 public class MusicString {	
 	/**
@@ -25,12 +26,20 @@ public class MusicString {
 		this.notes = notes;
 	}
 	
-	public String playNote(int fret){
+	public String playFret(int fret){
 		try {
 			return notes.get(fret).getName();
 		} catch (Exception e) {
 			System.out.println(String.format("Could not find fret in String: frets:%d requested:%d message:%s",notes.size(), fret, e.getMessage()));
 		}
 		return null;
+	}	
+	/**
+	 * proxy method for NoteGenerator.getNoteIndex 
+	 * @param noteName 
+	 * @return the fret index where the note reside, returns -1 if it cannot find the note in the string
+	 */
+	public int findNote(String noteName){
+		return NoteGenerator.getNoteIndex(noteName, this.notes);
 	}
 }

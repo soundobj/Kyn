@@ -59,11 +59,20 @@ public class NoteGenerator {
 		this.notes = notes;
 	}	
 	/**
-	 * 
+	 * This is a proxy call for getNote getNoteIndex(String noteName, List<Note> notes)
 	 * @param noteName the name of the note i.e C#4
 	 * @return the index of this note in the notes list
 	 */
 	public int getNoteIndex(String noteName){
+		return getNoteIndex(noteName, this.notes);
+	}	
+	/**
+	 * 
+	 * @param noteName i.e 'C#3'
+	 * @param notes List<notes> to search the noteName in
+	 * @return the index where in List<notes> the note reside
+	 */
+	public static int getNoteIndex(String noteName, List<Note> notes){
 		for(Note note:notes){
 			if(note.getName().equals(noteName)){
 				return notes.indexOf(note);
