@@ -33,8 +33,8 @@ public class TestInstrument extends TestCase {
 		 * and we can check the number of frets a string has
 		 */
 		List<MusicString> strings = guitar.getStrings(); 
-		assertEquals("G", strings.get(6).playNote(3));
-		assertEquals("D", strings.get(5).playNote(5));
+		assertEquals("G2", strings.get(5).playNote(3));
+		assertEquals("D3", strings.get(4).playNote(5));
 		assertEquals(19, strings.get(0).getNotes().size());
 	}
 

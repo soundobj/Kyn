@@ -1,5 +1,6 @@
 package com.me.kyn.instrument;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -11,7 +12,7 @@ public abstract class GuitarInstrument {
 	/**
 	 *  the number of strings in the instrument
 	 */
-	List<MusicString> strings;
+	List<MusicString> strings = new ArrayList<MusicString>();
 	
 	public GuitarInstrument() {
 		super();
@@ -23,12 +24,12 @@ public abstract class GuitarInstrument {
 	 * and the open string note E3
 	 */
 	public void tuneStrings(Map<Integer,String> musicStrings, int noOfFrets){
-	    for( Integer key : musicStrings.keySet() ){
+		for( Integer key : musicStrings.keySet() ){
 	    	/*
-	    	 * get all existing notes and slice from the note provided in the musicStrings Map to the number of frets this guitar has
+	    	 * get all existing notes and slice from the open note provided in the musicStrings Map to the number of frets this guitar has
 	    	 */
-	    	int openStringIndex = noteGenerator.getNoteIndex(musicStrings.get(key));	    	
-	    	strings.add( new MusicString( noteGenerator.getNotes().subList( openStringIndex,  openStringIndex + noOfFrets)));	    	
+	    	int openStringIndex = noteGenerator.getNoteIndex(musicStrings.get(key));
+	    	strings.add( new MusicString( noteGenerator.getNotes().subList( openStringIndex,  (openStringIndex + noOfFrets))));	    	
 	    }
 	}
 	public List<MusicString> getStrings() {
