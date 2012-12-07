@@ -1,5 +1,8 @@
 package com.me.kyn.learning;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Locale;
 import java.util.Properties;
 
@@ -16,5 +19,37 @@ import java.util.Properties;
 public class OutputManager {
 
 	private Locale locale;
-	private Properties props; 
+	private Properties properties = new Properties();
+	private String language;
+	
+	public OutputManager(String language) {
+		this.locale = new Locale(language);
+		this.language = language;
+	}
+	public Locale getLocale() {
+		return locale;
+	}
+	public void setLocale(Locale locale) {
+		this.locale = locale;
+	}
+	public Properties getProperties() {
+		return properties;
+	}
+	private void setProperties() throws FileNotFoundException, IOException  {
+		try {
+			properties.load(new FileInputStream("src.main.resources/" + this.language + "/messages.properties"));
+		} catch (FileNotFoundException e) {
+			System.out.println(String.format("Could not load language properties for %s due to error %s defaulting to English", locale.getCountry(),e.getMessage()));
+			e.printStackTrace();
+		}
+		try {
+			properties.load(new FileInputStream("src.main.resources/en/messages.properties"));
+		} catch (Exception e) {
+			throw new FileNotFoundException();
+		}
+	} 
+	
+	public String getMessage(String messageId){
+		return null;
+	}
 }
