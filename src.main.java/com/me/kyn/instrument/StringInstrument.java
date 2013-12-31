@@ -6,7 +6,7 @@ import java.util.Map;
 
 import com.me.kyn.music.NoteGenerator;
 
-public abstract class GuitarInstrument {
+public abstract class StringInstrument {
 
 	private NoteGenerator noteGenerator = new NoteGenerator();
 	/**
@@ -14,7 +14,7 @@ public abstract class GuitarInstrument {
 	 */
 	List<MusicString> strings = new ArrayList<MusicString>();
 	
-	public GuitarInstrument() {
+	public StringInstrument() {
 		super();
 		noteGenerator.setNotes();		
 	}	

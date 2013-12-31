@@ -4,10 +4,7 @@
 	<classpathentry kind="src" path="src.main.resources"/>
 	<classpathentry kind="src" path="src.test.resources"/>
 	<classpathentry kind="src" path="src.test.java"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="D:/david/workspace/downloads/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/david/workspace/downloads/esl4j-core-1.0.jar"/>
-	<classpathentry kind="lib" path="D:/david/workspace/downloads/tl4j-junit3-1.1.3.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 6 [1.6.0_65-b14-462]"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

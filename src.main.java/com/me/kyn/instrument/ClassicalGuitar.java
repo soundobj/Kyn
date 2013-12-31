@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class ClassicalGuitar extends GuitarInstrument implements Instrument {
+public class ClassicalGuitar extends StringInstrument implements Instrument {
 	/**
 	 *  how many notes each Musicstring has
 	 */
