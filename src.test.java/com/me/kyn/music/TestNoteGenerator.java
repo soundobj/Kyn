@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class TestNoteGenerator extends TestCase {
 	NoteGenerator noteGenerator;
+	// test commit
 	List<Note> notes;	
 	@Test
 	public void testgetNotes () {
